@@ -29,7 +29,7 @@ pub type c_int = i32;
     feature = "libc"
 ))]
 pub fn abort() -> ! {
-    unsafe { libc::abort() };
+    unsafe { libc::abort() }
 }
 
 #[cfg(all(
@@ -37,5 +37,5 @@ pub fn abort() -> ! {
     not(feature = "libc")
 ))]
 pub fn abort() -> ! {
-    core::intrinsics::abort();
+    core::intrinsics::abort()
 }
