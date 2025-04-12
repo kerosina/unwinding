@@ -85,7 +85,7 @@ fn do_panic(msg: Box<dyn Any + Send>) -> ! {
     }
     let code = crate::panic::begin_panic(Box::new(msg));
     eprintln!("failed to initiate panic, error {}", code.0);
-    crate::util::abort();
+    crate::util::abort()
 }
 
 #[panic_handler]
